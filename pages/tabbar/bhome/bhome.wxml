@@ -1,0 +1,14 @@
+<text>工作页面</text>
+
+<button bindtap="btnTan">点击弹出框</button>
+
+<!-- 测试OK -->
+<mp-dialog title="{{titleName}}" show="{{isShow}}" bindbuttontap="tapDialogButton" buttons="{{sureOrfalse}}">
+  <view>{{content}}</view>
+</mp-dialog>
+
+<button bindtap="btnTanBottom">点击底部弹出框</button>
+
+<!--WXML示例代码-->
+<mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{actions}}" title="这是一个标题，可以为一行或者两行。">
+</mp-actionSheet>

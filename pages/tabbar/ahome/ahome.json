@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "控件",
+  "usingComponents": {
+    "ec-canvas": "../../../ec-canvas/ec-canvas"
+  }
+}

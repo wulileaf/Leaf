@@ -1,0 +1,103 @@
+page {
+  background: #d8d8d8;
+}
+
+/* ---------------------------公共样式方法--------------------------------- */
+
+.sun-text {
+  font-size: 15px;
+  color: red;
+}
+
+/* ---------------------------公共样式方法--------------------------------- */
+
+.sun-label-one {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  flex-direction: row;
+}
+
+.sun-item-one {
+  width: 50%;
+  height: 100%;
+  padding: 2rpx;
+}
+
+.sun-item-two {
+  width: 50%;
+  height: 100%;
+  padding: 2rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.sun-img {
+  width: 100%;
+  height: 50%;
+}
+
+/* --------------------------修改swiper点的样式/自定义swiper----------------------- */
+
+.swiper-container {
+  position: relative;
+  height: auto;
+}
+
+/* .swiper-container .swiper {
+  height: 300rpx;
+} */
+
+.swiper-container .swiper .img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-container .dots .dot {
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  transition: all 0.6s;
+}
+
+.swiper-container .dots .dot.active {
+  width: 24rpx;
+  background: #f80;
+}
+
+/* --------------------------修改swiper点的样式/自定义swiper----------------------- */
+
+/* --------------------设计4分样式-------------------- */
+
+.sun-four {
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+
+.sun-four-item {
+  padding: 0.8%;
+}
+
+/* --------------------设计4分样式-------------------- */
+
+.sun-four-item-row {
+  padding: 0.8%;
+}
+
+.sun-four-item-cloum {
+  padding: 0.8%;
+}

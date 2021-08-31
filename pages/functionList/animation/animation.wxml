@@ -1,0 +1,96 @@
+<button bindtap="btnTan">点击弹出框</button>
+
+<!-- 测试OK -->
+<mp-dialog title="{{titleName}}" show="{{isShow}}" bindbuttontap="tapDialogButton" buttons="{{sureOrfalse}}">
+  <view>{{content}}</view>
+</mp-dialog>
+
+<button bindtap="btnTanBottom">点击底部弹出框</button>
+
+<!--WXML示例代码-->
+<mp-actionSheet bindactiontap="tapCtionSheet" show='{{showActionsheet}}' actions="{{actions}}" title="这是一个标题，可以为一行或者两行。">
+</mp-actionSheet>
+
+<view class="page">
+
+  <view class="page__hd">
+    <view class="page__title">Badge</view>
+    <view class="page__desc">徽章</view>
+  </view>
+
+  <view class="page__bd">
+
+    <mp-cells title="新消息提示跟摘要信息后，统一在列表右侧">
+      <mp-cell title="单行列表" link>
+        <view slot="footer">
+          <view style="display: inline-block;vertical-align:middle; font-size: 17px;">详细信息</view>
+          <mp-badge style="margin-left: 5px;margin-right: 5px;" ext-class="blue" />
+        </view>
+      </mp-cell>
+    </mp-cells>
+
+    <mp-cells title="未读数红点跟在主题信息后，统一在列表左侧">
+
+      <mp-cell>
+        <view slot="title" style="position: relative;margin-right: 10px;">
+          <image src="/images/p2.png" style="width: 50px; height: 50px; display: block" />
+          <mp-badge content="99+" style="position: absolute;top: -.4em;right: -.4em;" />
+        </view>
+        <view>联系人名称</view>
+        <view style="font-size: 13px;color: #888888;">摘要信息</view>
+      </mp-cell>
+
+      <mp-cell link>
+        <view style="display: inline-block; vertical-align: middle">单行列表</view>
+        <mp-badge content="8" style="margin-left: 5px;" />
+      </mp-cell>
+
+      <mp-cell link>
+        <view style="display: inline-block; vertical-align: middle">单行列表</view>
+        <mp-badge style="margin-left: 5px;" content="New" />
+      </mp-cell>
+
+    </mp-cells>
+
+  </view>
+
+</view>
+
+
+<!--WXML示例代码-->
+<mp-cells title="单选列表项">
+  <mp-checkbox-group prop="radio" multi="{{false}}" bindchange="radioChange">
+    <mp-checkbox wx:for="{{radioItems}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+  </mp-checkbox-group>
+</mp-cells>
+
+<mp-cells title="复选列表项">
+  <mp-checkbox-group prop="checkbox" multi="{{true}}" bindchange="checkboxChange">
+    <!-- checkboxItems数据源 -->
+    <!-- label显示的值 -->
+    <!-- value取到的对应参数值 -->
+    <!-- checked选中情况 -->
+    <mp-checkbox wx:for="{{checkboxItems}}" wx:key="value" label="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></mp-checkbox>
+  </mp-checkbox-group>
+</mp-cells>
+
+<button bindtap="btnGallery">点击展示画廊</button>
+
+
+
+<!-- <view class="page">
+  <view class="page__hd">
+    <view class="page__title">Gallery</view>
+    <view class="page__desc">画廊，类似原生的wx.previewImage的展示。</view>
+  </view> -->
+<mp-gallery show="{{isShowGallery}}" bindchange="{{change}}" binddelete="delete" bindhide="{{hide}}" img-urls="{{imgUrls}}" delete hideOnClick="{{isHideOnClick}}" current="0"></mp-gallery>
+<!-- </view> -->
+
+<!--WXML示例代码-->
+<mp-halfScreenDialog bindbuttontap="buttontap" show="{{show}}" maskClosable="{{true}}" title="测试标题B" subTitle="测试标题B的副标题" desc="辅助描述内容，可根据实际需要安排" tips="辅助提示内容，可根据实际需要安排" buttons="{{buttons}}"></mp-halfScreenDialog>
+<button class="weui-btn" type="primary" bindtap="open">Open</button>
+
+
+<!--WXML示例代码-->
+<mp-icon type="field" icon="add" color="black" size="{{25}}"></mp-icon>
+<mp-icon icon="copy" color="black" size="{{25}}"></mp-icon>

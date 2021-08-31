@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "画廊效果",
+  "usingComponents": {
+    "mp-gallery": "/weui-miniprogram/gallery/gallery",
+    "mp-loading": "/weui-miniprogram/loading/loading"
+  },
+  "enablePullDownRefresh": true
+}

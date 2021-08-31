@@ -1,0 +1,80 @@
+<!-- style='width:100%;height:auto' -->
+<view class='sun-label' style='width:100%;height:auto'>
+  <!-- vertical="{{false}}"  -->
+  <swiper vertical="{{true}}" autoplay="true" indicator-dots="{{false}}" style='width:100%;height:150px' circular="true">
+    <swiper-item wx:for="{{imagesurl}}" bindtap='tapS' wx:for-index="wuxian" data-index="{{wuxian}}" wx:key>
+      <image src="{{item}}" mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
+  </swiper>
+
+</view>
+
+<view class='sun-label-one' style='margin-top:5px'>
+
+  <image class='sun-item-one' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573971601472&di=69609d188237fd91f20d44b9a9482eda&imgtype=0&src=http%3A%2F%2Fphoto.16pic.com%2F00%2F22%2F08%2F16pic_2208648_b.jpg'>
+  </image>
+
+  <view class='sun-item-two'>
+    <image class='sun-img' src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2615645149,859447379&fm=26&gp=0.jpg'></image>
+    <image class='sun-img' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573971527647&di=551566c45f7300d2d777740aee67f99e&imgtype=0&src=http%3A%2F%2Fpic70.nipic.com%2Ffile%2F20150628%2F20578453_004635190000_2.jpg'></image>
+  </view>
+
+
+</view>
+
+<!-- 修改swiper底部滑动点样式成功 -->
+<text class='sun-text' style='width:100%;height:30px;'>修改轮滑点的样式</text>
+<view class="swiper-container">
+  <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper" circular='true'>
+    <block wx:for="{{slider}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item.picUrl}}" class="img"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="dots">
+    <block wx:for="{{slider}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+
+<!-- <view style='width:100%;height:300px'></view> -->
+
+<!-- 中间分四格样式 -->
+<view class="sun-four" style="margin-top:10px">
+  <block wx:for="{{fourData}}" wx:key>
+    <image data-index="{{index}}" bindtap="bindFour" style="width:48.2%;height:100px" class="sun-four-item" src="{{item.imgUrl}}"></image>
+  </block>
+</view>
+
+<!-- 中间分四格样式,中间夹杂其他的样式 -->
+<view class="sun-four" style="margin-top:10px">
+  <block wx:for="{{fourOtherData}}" wx:key>
+    <!-- 正常的样式 -->
+    <!-- iden = normal -->
+    <image data-index="{{index}}" bindtap="bindFour" style="width:48.2%;height:100px" class="sun-four-item" src="{{item.imgUrl}}" hidden="{{item.iden==0?false:true}}"></image>
+    <!-- 横向swiper滑动样式 -->
+    <!-- iden = row -->
+    <view class="sun-four-item-row" hidden="{{item.iden==1?false:true}}" style="width:48.2%;height:100px">
+      <swiper autoplay="auto" bindchange="swiperChange" circular='true' style="width:100%;height:100px">
+        <!-- item.rowImg -->
+        <swiper-item wx:for="{{item.rowImg}}" wx:for-item="rowImg" bindtap='tapS' data-index="{{index}}" wx:key>
+          <image style="width:100%;height:100px" src="{{rowImg.imgUrl}}" class="img" mode='aspectFill'></image>
+        </swiper-item>
+      </swiper>
+    </view>
+    <!-- <image data-index="{{index}}" bindtap="bindFour" style="width:48.2%;height:100px" class="sun-four-item" src="{{item.imgUrl}}" hidden="{{item.iden==1?false:true}}"></image> -->
+    <!-- 纵向swiper滑动样式 -->
+    <!-- iden = cloum -->
+    <view class="sun-four-item-cloum" hidden="{{item.iden==2?false:true}}" style="width:48.2%;height:100px">
+      <swiper vertical="{{true}}" autoplay="true" indicator-dots="{{false}}" circular="true" style="width:100%;height:100px">
+        <swiper-item wx:for="{{item.rowImg}}" bindtap='tapS' wx:for-index="index" data-index="{{index}}" wx:key wx:for-item="cloumImg">
+          <image style="width:100%;height:100px" src="{{cloumImg.imgUrl}}" mode='aspectFill'></image>
+        </swiper-item>
+      </swiper>
+    </view>
+
+    <!-- <image data-index="{{index}}" bindtap="bindFour" style="width:48.2%;height:100px" class="sun-four-item" src="{{item.imgUrl}}" hidden="{{item.iden==2?false:true}}"></image> -->
+  </block>
+</view>

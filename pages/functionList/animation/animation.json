@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "当日拜访",
+  "usingComponents": {
+    "mp-actionSheet": "/weui-miniprogram/actionsheet/actionsheet",
+    "mp-cells": "/weui-miniprogram/cells/cells",
+    "mp-cell": "/weui-miniprogram/cell/cell",
+    "mp-badge": "/weui-miniprogram/badge/badge",
+    "mp-checkbox-group": "/weui-miniprogram/checkbox-group/checkbox-group",
+    "mp-checkbox": "/weui-miniprogram/checkbox/checkbox",
+    "mp-dialog": "/weui-miniprogram/dialog/dialog",
+    "mp-gallery": "/weui-miniprogram/gallery/gallery",
+    "mp-halfScreenDialog": "/weui-miniprogram/half-screen-dialog/half-screen-dialog",
+    "mp-icon": "/weui-miniprogram/icon/icon",
+    "mp-loading": "/weui-miniprogram/loading/loading"
+  }
+}

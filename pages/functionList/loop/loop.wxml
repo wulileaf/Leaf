@@ -1,0 +1,6 @@
+<view style="width:100%;">
+  <block wx:for="{{itemData}}" wx:for-index="wuxianIndex" wx:for-item="wuxian" wx:key>
+    <!-- data-自己定义="{{a}}" a如果是wx:for-item="wuxian"里面得值那个就整个item,如果是wuxian.name那就是去item里面具体得值 -->
+    <view style="width:100%;height:60px;border-bottom:1rpx solid #d8d8d8" data-wuxain="{{wuxian.name}}" data-task="{{wuxian}}" data-a="{{wuxianIndex}}" bindtap="bindItem">{{wuxian.name}}----{{wuxianIndex}}</view>
+  </block>
+</view>

@@ -1,0 +1,93 @@
+<view class='sun-sy'>
+
+  <view class='sun-label'>
+    <view class='sun-saoma-vip' bindtap='sunBtnSaoMa'>
+      <icon class='iconfont icon-saoyisao' style='color:#ffffff;width:25px;heigth:25px;font-size:25px;'></icon>
+      <text class='tx'>扫一扫</text>
+    </view>
+    <!-- <image src='/images/ssk.png' class='sun-ssk'></image> -->
+    <view style="width:75%;height:58%;border-width:1px;border-color:red;background:#d8d8d8;border-bottom-right-radius:0%;border-top-right-radius:23px;border-bottom-left-radius:23px;border-top-left-radius:23px;opacity:0.6" class="sun-sousuo">
+      <image src="/images/biaoqing.png" style="width:25px;height:25px;margin-left:10px"></image>
+      <text style="font-size:13px;color:black;margin-left:5px">iphone X Max</text>
+    </view>
+    <view class='sun-saoma-vip' bindtap='sunBtnVip'>
+      <icon class='iconfont icon-huiyuan' style='color:#ffffff;width:18px;heigth:18px;font-size:18px;'></icon>
+      <text class='tx'>会员</text>
+    </view>
+  </view>
+
+  <!-- bindchange="tapSwiper" -->
+  <swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" current='{{current}}'>
+    <swiper-item wx:for="{{imagesurl}}" bindtap='tapS' wx:for-index="index" data-index="{{index}}" wx:key>
+      <image src="{{item}}" mode='aspectFill'></image>
+    </swiper-item>
+  </swiper>
+
+  <view class='sun-function'>
+    <block wx:for="{{funct}}" wx:for-index="index" wx:key>
+      <view class='sun-funct-ion' data-index="{{index}}" bindtap='check'>
+        <icon class='iconfont {{item.icon}} sun-icon' style='color:#{{item.color}};width:35px;heigth:35px;font-size:35px;'></icon>
+        <text class='tex'>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- <view class="eChartsMain sun-gg">
+    <ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ec}}"></ec-canvas>
+  </view> -->
+
+  <!-- <image class='sun-gg' src='/images/gg.png'></image> -->
+
+  <view class='sun-pingou'>
+    <view class='sun-pingou-title'>
+      <text class='sun-left-tex'>苏宁拼购</text>
+      <text class='sun-rigth-tex'>好友都在拼</text>
+    </view>
+    <scroll-view scroll-x="true" class='sun-pingou-text'>
+      <block wx:for="{{pingou}}" data-index="index" wx:for-index='index' wx:key>
+        <view class='sun-pingou-item'>
+          <view class='cad'>
+            <image src='{{item.programmeImage[0]}}' class='sun-pingou-img'></image>
+            <text class='tex'>{{item.programmeName}}</text>
+            <text class='tex-price'>{{item.programmeId}}￥</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <!-- <image class='sun-gg' src='/images/xr.png'></image> -->
+
+  <view class='sun-pingou'>
+    <view class='sun-pingou-title'>
+      <text class='sun-left-tex'>猜你喜欢</text>
+      <!-- <text class='sun-rigth-tex'>好友都在拼</text> -->
+    </view>
+    <view class='sun-cainixihuan-text'>
+      <block wx:for="{{cainixihuan}}" wx:for-index='index' wx:key>
+        <view class='sun-pingou-cnxh' bindtap='bindCNXH' data-index="{{index}}">
+          <image src='{{item.img}}' style='width:90%;height:71%;margin-left:5%;'></image>
+          <text class='sun-show-text' style="font-size:25rpx;margin-left:5%;height:14%;">{{item.name}}</text>
+          <text style='font-size:20rpx;margin-left:5%;height:5%;'>{{item.store}}</text>
+          <view class='sun-price' style='width:100%;height:10%;'>
+            <text style="font-size:20rpx;color:red;margin-left:5%;">￥</text>
+            <text style="color:red;">{{item.price}}</text>
+            <text style="color:#c8c8c8;font-size:25rpx;margin-left:5%">{{item.appraise}}万+评价</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view style='width:100%;height:7.5px;background:#f9f9f9;'></view>
+    <!-- hidden="{{showBottom}}" -->
+    <view class='sun-bottom' style='width:100%;height:50px;color:#c8c8c8;background:#f9f9f9;font-size:13px;' hidden="{{showBottom}}">--------- 我也是有底线的 ---------</view>
+  </view>
+
+  <!-- {{iconHeight}} -->
+  <icon class='iconfont icon-zhuangzhang go-top' style='bottom:40px;right:30px;position:fixed;' bindtap="bindGoTop" hidden="{{goTop}}"></icon>
+
+
+
+</view>
+
+<!-- 保证最后滑到页面底部时所有的数据都能展示在页面上 -->
+<!-- <view class='cu-tabbar-height'></view> -->

@@ -1,0 +1,4 @@
+<view class='eChartItme' wx:for="{{charts}}" wx:key data-index="{{index}}" bindtap='checkYou' style='width:97%;height:60px;border-bottom:#d8d8d8 solid 0.1px;padding-left:10px;'>
+  <text>{{item.name}}</text>
+  <icon class='iconfont icon-arrow-right sit' style='width:35px;height:35px;font-size:35px;color:#000000;'></icon>
+</view>

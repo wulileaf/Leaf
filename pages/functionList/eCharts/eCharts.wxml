@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<!-- gauge这个样式是所欲的eCharts表的通用的样式 -->
+<view class="eCharts">
+  <ec-canvas id="mychart-dom-gauge" canvas-id="mychart-gauge" ec="{{ec}}"></ec-canvas>
+</view>
