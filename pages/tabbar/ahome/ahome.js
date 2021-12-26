@@ -118,9 +118,9 @@ Page({
     imageUrl: "componentBg.png",
     // https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640
     imagesurl: [
-      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573919960528&di=14ff7c5d89eedbc6237b0372526d3c42&imgtype=0&src=http%3A%2F%2Fdpic.tiankong.com%2Fim%2Frc%2FQJ6900929898.jpg',
-      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573926069583&di=c5cd4bf5c939be2139da029faf5b7db6&imgtype=0&src=http%3A%2F%2Fhuafans.dbankcloud.com%2Fpic%2F2017%2F11%2F09%2F5e73598b6db356c260d5093de507ae75_IMG_20171109_075558.jpg%3Fmode%3Ddownload',
-      'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573926069586&di=849a4ecdd3fcbfb876d002dc6985d3c6&imgtype=0&src=http%3A%2F%2Fimg.yzcdn.cn%2Fupload_files%2F2017%2F09%2F18%2FFuvM4lfZ_p0U91e0avTVbm69Q9bu.jpg%2521730x0.jpg'
+      'https://t7.baidu.com/it/u=631924955,996383527&fm=193&f=GIF',
+      'https://t7.baidu.com/it/u=3399334306,3391085092&fm=193&f=GIF',
+      'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2Fdc%2Fd2%2Fe3%2Fdcd2e350f4fcae5d336b04756417c6dd.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1634955691&t=a4e8e1df8c9cd0da7e283dea491a5a12'
     ],
     current: '0',
     funct: [{
@@ -303,19 +303,19 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
 
     var that = this
     // 获取用户手机高度
     wx.getSystemInfo({
-      success: function(res) {
+      success: function (res) {
         // console.log("-----" + res.windowHeight + "------" + res.screenHeight)
         that.setData({
           screenHeight: res.screenHeight
         })
       },
-      fail: function(res) {},
-      complete: function(res) {},
+      fail: function (res) { },
+      complete: function (res) { },
     })
 
   },
@@ -323,35 +323,35 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
@@ -359,7 +359,7 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
     var that = this
     // console.log("onReachBottom方法-----------------")
     tools.Toast("onReachBottom方法", "none")
@@ -381,7 +381,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   },
 
@@ -417,7 +417,7 @@ Page({
 
   // 微信小程序自带的页面滚动监听事件onPageScroll
   // e.scrollTop获取下滑的具体高度
-  onPageScroll: function(e) {
+  onPageScroll: function (e) {
     var that = this
     // console.log(e.scrollTop)
     if (that.data.screenHeight == 0) {
